@@ -1,3 +1,14 @@
+C_______________________________________________________________________________
+C     STEPWISE 2.21 is an updated version of the WIPP STEPWISE program configured to run on Windows
+C     STEPWISE 2.21a is identical to STEPWISE 2.21 except it has a wrapper to allow it to be more easily called from within a code
+C     See the STEPWISE User Manual (stp_220_um.pdf) in the ZIP file for more information
+C
+C     Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS).
+C     Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
+C
+C     Stepwise 2.21 is distributed under the GNU Lesser General Public License (see LICENSE.TXT)
+C_______________________________________________________________________________
+
 !   /************************************************************************
 !    *                                                                      *
 !    *   SALLABERRY Cedric - SANDIA NATIONAL LABORATORIES                   *
@@ -332,7 +343,7 @@
 
       WRITE (U_STEP_IND,*) '5'
       WRITE (U_STEP_IND,'(A2,A)') '! ',FILESP(2)
-      WRITE (U_STEP_IND,FMT='(3I4)') NB_INPUTS, SAMPLE_SIZE, 1
+      WRITE (U_STEP_IND,FMT='(3I)') NB_INPUTS, SAMPLE_SIZE, 1
       
       WRITE (U_STEP_IND,*) (INPUT_NAMES(J),J=1,NB_INPUTS)
       
@@ -371,7 +382,7 @@
 
       WRITE (U_STEP_DEP,*) '5'
       WRITE (U_STEP_DEP,'(A2,A)') '! ',FILESP(3)
-      WRITE (U_STEP_DEP,FMT='(3I4)') 1, SAMPLE_SIZE, 1
+      WRITE (U_STEP_DEP,FMT='(3I)') 1, SAMPLE_SIZE, 1
       
       WRITE (U_STEP_DEP,*) INPUT_NAMES(NB_INPUTS+1)
       
@@ -401,8 +412,7 @@
 !   ==============================
 
       OPEN (U_STEP_INPUT, FILE=FILESP(1), STATUS='REPLACE')
-      CALL idate(today)
-!      CALL idate(today(1),today(2),today(3))
+      CALL idate(today(1),today(2),today(3))
       WRITE (U_STEP_INPUT,*) "! Sandia National Laboratories"
       WRITE (U_STEP_INPUT,*) "! Stepwise regression program"
       WRITE (U_STEP_INPUT,*) "! File: ",STEP_INPUT_FILENAME
@@ -713,15 +723,15 @@ C   --Language(s):           FORTRAN 77
 
       IMPLICIT NONE
 
-      INCLUDE 'stp_title_common.inc'
+      INCLUDE 'stp_TITLE_COMMON.INC'
 
-      INCLUDE 'stp_force_common.inc'
+      INCLUDE 'stp_FORCE_COMMON.INC'
 
-      INCLUDE 'stp_transform_common.inc'
+      INCLUDE 'stp_TRANSFORM_COMMON.INC'
 
-      INCLUDE 'stp_print_options_common.inc'
+      INCLUDE 'stp_PRINT_OPTIONS_COMMON.INC'
 
-      INCLUDE 'stp_plot_options_common.inc'
+      INCLUDE 'stp_PLOT_OPTIONS_COMMON.INC'
 
       INTEGER ISTRLEN
       INTEGER IQAERRUNI

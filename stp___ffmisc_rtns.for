@@ -1,3 +1,14 @@
+C_______________________________________________________________________________
+C     STEPWISE 2.21 is an updated version of the WIPP STEPWISE program configured to run on Windows
+C     STEPWISE 2.21a is identical to STEPWISE 2.21 except it has a wrapper to allow it to be more easily called from within a code
+C     See the STEPWISE User Manual (stp_220_um.pdf) in the ZIP file for more information
+C
+C     Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS).
+C     Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
+C
+C     Stepwise 2.21 is distributed under the GNU Lesser General Public License (see LICENSE.TXT)
+C_______________________________________________________________________________
+
 C=======================================================================
       LOGICAL FUNCTION FFNUMBER (IFLD, INTYP)
 C=======================================================================
@@ -21,7 +32,7 @@ C   --   INTYP - IN - the input type from the free-field reader
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE CKNONE (NVAL, ISSEL, VALNAM, *)
 C=======================================================================
@@ -58,7 +69,7 @@ C   --   * - return statement if error
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE LIMINT (IMINVL, IMAXVL, EXPECT, IVAL, *)
 C=======================================================================
@@ -105,7 +116,7 @@ C   --      message is printed
   100 CONTINUE
       RETURN 1
       END
-
+
 C=======================================================================
       SUBROUTINE LIMREAL (RMINVL, RMAXVL, EXPECT, RVAL, *)
 C=======================================================================
@@ -148,7 +159,7 @@ C   --      message is printed
   100 CONTINUE
       RETURN 1
       END
-
+
 C=======================================================================
       SUBROUTINE ABRSTR (RETWRD, ABBR, STRTBL)
 C=======================================================================
@@ -200,7 +211,7 @@ C   --   STRTBL - IN - the table of possible strings; ended by ' '
   110 CONTINUE
       RETURN
       END
-
+
 C=======================================================================
       LOGICAL FUNCTION MATCHSTR (INSTR, MATCH, NLET)
 C=======================================================================
@@ -245,7 +256,7 @@ C   --   NLET - IN - number of letters that must match; 0 for exact match
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE QUOTESYMBOL (INQUOT, STRING, *)
 C=======================================================================
