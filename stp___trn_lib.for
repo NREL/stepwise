@@ -1,14 +1,3 @@
-C_______________________________________________________________________________
-C     STEPWISE 2.21 is an updated version of the WIPP STEPWISE program configured to run on Windows
-C     STEPWISE 2.21a is identical to STEPWISE 2.21 except it has a wrapper to allow it to be more easily called from within a code
-C     See the STEPWISE User Manual (stp_220_um.pdf) in the ZIP file for more information
-C
-C     Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS).
-C     Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
-C
-C     Stepwise 2.21 is distributed under the GNU Lesser General Public License (see LICENSE.TXT)
-C_______________________________________________________________________________
-
 C=======================================================================
       SUBROUTINE TRNICLOSE (IUNITI, IERRTRN)
 C=======================================================================
@@ -72,7 +61,7 @@ C   --Clear out common entry for this transfer file
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE TRNICMT (IUNITI, MAXCMT, NUMCMT, CMTLIN, IERRTRN)
 C=======================================================================
@@ -190,7 +179,7 @@ C   --Error encountered in reading TRN file
       CALL XTRNERR ('Reading transfer file comment lines', IERRTRN)
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE TRNINAMES (IUNITI, NUMVAR, NAMES, IERRTRN)
 C=======================================================================
@@ -289,7 +278,7 @@ C   --Error encountered in reading transfer file
      &   'Reading transfer file variable names', IERRTRN)
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE TRNIOPEN (IUNITI, FILE, IERRTRN)
 C=======================================================================
@@ -407,7 +396,7 @@ C   --Error - clear entry
       END IF
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE TRNISIZES (IUNITI, NUMVAR, NUMSTEP, NUMVEC, IERRTRN)
 C=======================================================================
@@ -472,7 +461,7 @@ C   --Fill in values from common
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE TRNITIMES (IUNITI, NUMSTEP, TIMES, IERRTRN)
 C=======================================================================
@@ -549,7 +538,7 @@ C   --Error encountered in reading transfer file
       CALL XTRNERR ('Reading transfer file step intervals', IERRTRN)
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE XTRNERR (ERRMSG, IOSTAT)
 C=======================================================================
@@ -647,7 +636,7 @@ C      --Write the I/O error
 10010  FORMAT ('FORTRAN I/O Error #', I3, :, ' - ', A)
 10020  FORMAT (5X, A)
       END
-
+
 C=======================================================================
       SUBROUTINE XTRNIXCLR (IXTRN)
 C=======================================================================
@@ -702,7 +691,7 @@ C!!!!!End of TRN_COMMON.INC
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE XTRNIXNEW (CALLER, IUNIT, IXTRN, IERRTRN)
 C=======================================================================
@@ -806,7 +795,7 @@ C   --Too many transfer files defined
       CALL XTRNERR ('Too many transfer files defined', 0)
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE XTRNIXTRN (CALLER, IUNIT, IXTRN, IERRTRN)
 C=======================================================================
@@ -898,7 +887,7 @@ C   --Transfer file entry not found
       CALL XTRNERR ('Undefined transfer file unit number', 0)
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE XTRNMOVHD (IUNITI, IXTRNI, TYPE, IERRTRN)
 C=======================================================================

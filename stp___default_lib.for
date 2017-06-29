@@ -1,14 +1,3 @@
-C_______________________________________________________________________________
-C     STEPWISE 2.21 is an updated version of the WIPP STEPWISE program configured to run on Windows
-C     STEPWISE 2.21a is identical to STEPWISE 2.21 except it has a wrapper to allow it to be more easily called from within a code
-C     See the STEPWISE User Manual (stp_220_um.pdf) in the ZIP file for more information
-C
-C     Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS).
-C     Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
-C
-C     Stepwise 2.21 is distributed under the GNU Lesser General Public License (see LICENSE.TXT)
-C_______________________________________________________________________________
-
 C=======================================================================
       SUBROUTINE CPYINT (LEN, IFROM, ITO)
 C=======================================================================
@@ -36,7 +25,7 @@ C   --   ITO - OUT - the copied list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE CPYLOG (LEN, LFROM, LTO)
 C=======================================================================
@@ -64,7 +53,7 @@ C   --   LTO - OUT - the copied list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE CPYREAL (LEN, RFROM, RTO)
 C=======================================================================
@@ -92,7 +81,7 @@ C   --   RTO - OUT - the copied list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE INICOUNT (LEN, ITO)
 C=======================================================================
@@ -119,7 +108,7 @@ C   --   ITO - OUT - the initialized list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE INIINT (LEN, IFROM, ITO)
 C=======================================================================
@@ -148,7 +137,7 @@ C   --   ITO - OUT - the initialized list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE INILOG (LEN, LFROM, LTO)
 C=======================================================================
@@ -177,7 +166,7 @@ C   --   LTO - OUT - the initialized list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE INIREAL (LEN, RFROM, RTO)
 C=======================================================================
@@ -206,7 +195,7 @@ C   --   RTO - OUT - the initialized list
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE INISTR (LEN, IFROM, ITO)
 C=======================================================================
@@ -235,7 +224,7 @@ C   --   ITO - OUT - the initialized list
 
       RETURN
       END
-
+
 C=======================================================================
       INTEGER FUNCTION INTADD (LENLST, INTLST)
 C=======================================================================
@@ -263,7 +252,7 @@ C   --   INTLST - IN - the list of integers to be added
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE INTSTR (LNGSTR, INUM, ISTR, LSTR)
 C=======================================================================
@@ -314,7 +303,7 @@ C      --Convert number to string of fixed length
 
       RETURN
       END
-
+
 C=======================================================================
       INTEGER FUNCTION LOCINT (INT, LENLST, INTLST)
 C=======================================================================
@@ -344,7 +333,7 @@ C   --   INTLST - IN - the list of integers to be searched
   110 CONTINUE
       RETURN
       END
-
+
 C=======================================================================
       INTEGER FUNCTION NUMEQLOG (TORF, LENLST, LOGLST)
 C=======================================================================
@@ -375,7 +364,7 @@ C   --   LOGLST - IN - the list of logicals to be searched
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE REALSTR (NNUM, NSIG, RNUM, RSTR, LSTR)
 C=======================================================================
@@ -586,7 +575,7 @@ C      --a common length
 
       RETURN
       END
-
+
 C=======================================================================
       INTEGER FUNCTION IENGRX (IMAXE, IMINE)
 C=======================================================================

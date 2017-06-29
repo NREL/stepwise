@@ -1,14 +1,3 @@
-C_______________________________________________________________________________
-C     STEPWISE 2.21 is an updated version of the WIPP STEPWISE program configured to run on Windows
-C     STEPWISE 2.21a is identical to STEPWISE 2.21 except it has a wrapper to allow it to be more easily called from within a code
-C     See the STEPWISE User Manual (stp_220_um.pdf) in the ZIP file for more information
-C
-C     Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS).
-C     Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
-C
-C     Stepwise 2.21 is distributed under the GNU Lesser General Public License (see LICENSE.TXT)
-C_______________________________________________________________________________
-
 C=======================================================================
       SUBROUTINE FFCHAR (IFLD, INTYP, CFIELD, DEFVAL, CVAL)
 C=======================================================================
@@ -42,7 +31,7 @@ C   --   CVAL - OUT - the character value
       IF (INTYP(IFLD) .GE. -1) IFLD = IFLD + 1
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE FFINT (IFLD, INTYP, IFIELD, EXPECT, IDEFVL, IVAL, *)
 C=======================================================================
@@ -89,7 +78,7 @@ C   --   * - return statement if the field is invalid; message is printed
       IF (INTYP(IFLD) .GE. -1) IFLD = IFLD + 1
       RETURN 1
       END
-
+
 C=======================================================================
       SUBROUTINE FFREAL (IFLD, INTYP, RFIELD, EXPECT, DEFVAL, RVAL, *)
 C=======================================================================
@@ -136,7 +125,7 @@ C   --   * - return statement if the field is invalid; message is printed
       IF (INTYP(IFLD) .GE. -1) IFLD = IFLD + 1
       RETURN 1
       END
-
+
 C=======================================================================
       SUBROUTINE FFONOFF (IFLD, INTYP, CFIELD, ISON, *)
 C=======================================================================
@@ -186,7 +175,7 @@ C   --   * - return statement if the field is invalid; message is printed
       IF (INTYP(IFLD) .GE. -1) IFLD = IFLD + 1
       RETURN 1
       END
-
+
 C=======================================================================
       SUBROUTINE FFIRANGE (IFLD, INTYP, CFIELD, IFIELD, EXPECT, MAXVAL,
      &   IRANGE, *)
@@ -345,7 +334,7 @@ C            --Get BY and step value
 10000  FORMAT ('Expected ', A, ', not "', A, '"')
 10010  FORMAT (A, I5, A, I5, A)
       END
-
+
 C=======================================================================
       LOGICAL FUNCTION FFEXIST (IFLD, INTYP)
 C=======================================================================
@@ -370,7 +359,7 @@ C   --      <-1 for end of fields
 
       RETURN
       END
-
+
 C=======================================================================
       LOGICAL FUNCTION FFMATCH (IFLD, INTYP, CFIELD, MATCH, NLET)
 C=======================================================================
@@ -410,7 +399,7 @@ C   --   NLET - IN - number of letters that must match; 0 for exact match
 
       RETURN
       END
-
+
 C=======================================================================
       SUBROUTINE FFNEED (IFLD, INTYP, FTYPE, NFLD, EXPECT, *)
 C=======================================================================
@@ -466,7 +455,7 @@ C   --      expected type; message is printed
   110 CONTINUE
       RETURN 1
       END
-
+
 C=======================================================================
       SUBROUTINE FFSCENID (IFLD, INTYP, CFIELD, IFIELD,
      &   FINDID, NUMSCN, IDSCN, EXPECT, IDEFVL, ID, ISCN, *)

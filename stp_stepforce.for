@@ -1,14 +1,3 @@
-C_______________________________________________________________________________
-C     STEPWISE 2.21 is an updated version of the WIPP STEPWISE program configured to run on Windows
-C     STEPWISE 2.21a is identical to STEPWISE 2.21 except it has a wrapper to allow it to be more easily called from within a code
-C     See the STEPWISE User Manual (stp_220_um.pdf) in the ZIP file for more information
-C
-C     Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS).
-C     Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
-C
-C     Stepwise 2.21 is distributed under the GNU Lesser General Public License (see LICENSE.TXT)
-C_______________________________________________________________________________
-
 C=======================================================================
       SUBROUTINE STEPFORCE (IADIM, A, IVAROK)
 C=======================================================================
@@ -31,8 +20,8 @@ C   --      >0 - forced variable
 
       IMPLICIT NONE
 
-      INCLUDE 'stp_FORCE_COMMON.INC'
-      INCLUDE 'stp_STEP_1_COMMON.INC'
+      INCLUDE 'stp_force_common.inc'
+      INCLUDE 'stp_step_1_common.inc'
 
       INTEGER IADIM
       DOUBLE PRECISION A(IADIM,IADIM)
