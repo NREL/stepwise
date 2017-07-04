@@ -2,7 +2,7 @@
 ifdef SystemRoot
 	TARGET=stepwise.exe
 	CP_TR_1=..\SAM\Sandia\windows
-	CP=copy
+	CP=cp
 	RM=cmd //C DEL //Q
 else
     UNAME_S := $(shell uname -s)
@@ -176,10 +176,7 @@ OBJ = \
 
 $(TARGET) : $(OBJ) 
 	$(IVFC) $(LFLAGS) $@ $^
-	$(MAKE) copy
-
-copy:
-	$(CP) $(TARGET) $(CP_TR_1)
+	$(CP) $(TARGET) $(CP_TR_1) 
 
 clean:
 	$(RM) *.o $(TARGET) *.mod
