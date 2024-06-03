@@ -6,7 +6,7 @@ all:
 	 make -f Makefile-stepwise ARCH=x86_64
 	 rm *.o
 	 lipo -create -output stepwise.bin stepwise_x86_64.bin stepwise_arm64.bin
-	 cp stepwise.bin ../SAM/Sandia/osx
+	 cp stepwise.bin ../../SAM/Sandia/osx
 
 clean:
 	$(RM) *.o *.bin *.mod

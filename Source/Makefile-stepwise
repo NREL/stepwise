@@ -8,16 +8,16 @@ IVFC=gfortran_${ARCH}
 # Because %SystemRoot% is the path to the windows directory is should be set on all Windows computers but not on Linux/MacOS
 ifdef SystemRoot
 	TARGET=stepwise.exe
-	CP_TR_1=..\SAM\Sandia\windows
+	CP_TR_1=..\..\SAM\Sandia\windows
 	CP=cp
 	RM=cmd //C DEL //Q
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
-		CP_TR_1=../SAM/Sandia/linux
+		CP_TR_1=../../SAM/Sandia/linux
     endif
     ifeq ($(UNAME_S),Darwin)
-		CP_TR_1=../SAM/Sandia/osx
+		CP_TR_1=../../SAM/Sandia/osx
     endif
 	TARGET=stepwise_${ARCH}.bin
 	CP=cp
