@@ -1,5 +1,5 @@
 #${ARCH}  is either x86_64 or arm64 to build universal binary from Makefile
-CFLAGS=-O2
+CFLAGS=-O2 -mmacosx-version-min=12  
 LFLAGS=-static-libgfortran -static-libgcc -static-libstdc++ -o
 IVFC=gfortran_${ARCH} 
 
